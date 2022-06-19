@@ -1,0 +1,33 @@
+package main
+
+import (
+	"fmt"
+)
+
+type DateBase struct {
+	Name     string
+	LastName string
+	Age      int
+}
+
+func (d DateBase) complete() {
+	fmt.Printf("Your name: %s\nYour last name: %s\nYour age: %d\n", d.Name, d.LastName, d.Age)
+}
+
+func main() {
+	var name, lastName string
+	var age int
+	fmt.Print("Enter your name: \n")
+	fmt.Scan(&name)
+	fmt.Print("Enter your last name: \n")
+	fmt.Scan(&lastName)
+	fmt.Print("Enter your age: \n")
+	fmt.Scan(&age)
+
+	unknown := DateBase{
+		Name:     name,
+		LastName: lastName,
+		Age:      age,
+	}
+	unknown.complete()
+}
