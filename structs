@@ -17,6 +17,7 @@ func (d DateBase) complete() {
 func main() {
 	var name, lastName string
 	var age int
+	
 	fmt.Print("Enter your name: \n")
 	fmt.Scan(&name)
 	fmt.Print("Enter your last name: \n")
