@@ -33,16 +33,17 @@ func main() {
 
 	enter("Please, enter the brand of car: ", &brand)
 	enter("Please, enter the body of car: ", &body)
-	enter("Please, enter engine of car: ", &engine)
-	enter("Please, enter how many places in car: ", &places)
-	enter("Please, enter the date of realise car: ", &realise)
+	enter("Please, enter the engine of car: ", &engine)
+	enter("Please, enter how many seats in car: ", &places)
+	enter("Please, enter the date of sale of the car: ", &realise)
 
-	y := dataCar{
+	ffx := dataCar{
 		brand,
 		body,
 		engine,
 		places,
 		realise,
 	}
-	y.sentence()
+
+	ffx.sentence()
 }
