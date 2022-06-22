@@ -1,0 +1,48 @@
+package main
+
+import (
+	"fmt"
+)
+
+type dataCar struct {
+	brand   string
+	body    string
+	engine  string
+	places  int
+	realise int
+}
+
+func (d dataCar) sentence() {
+	fmt.Printf(`
+		Brand:   %s
+		Body:    %s
+		Engine:  %s
+		Places:  %d
+		Realise: %d
+	`, d.brand, d.body, d.engine, d.places, d.realise)
+}
+
+func enter(text, value interface{}) {
+	fmt.Println(text)
+	fmt.Scan(value)
+}
+
+func main() {
+	var brand, body, engine string
+	var places, realise int
+
+	enter("Please, enter the brand of car: ", &brand)
+	enter("Please, enter the body of car: ", &body)
+	enter("Please, enter engine of car: ", &engine)
+	enter("Please, enter how many places in car: ", &places)
+	enter("Please, enter the date of realise car: ", &realise)
+
+	y := dataCar{
+		brand,
+		body,
+		engine,
+		places,
+		realise,
+	}
+	y.sentence()
+}
